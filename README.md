@@ -7,4 +7,5 @@ It has features like:
 2. Cool Simple UI
 3. Animations and Sound Effects
 4. Light Mode and Dark Mode
+5. Simple profile creation
 etc
