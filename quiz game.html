@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz game</title>
+    <link rel="stylesheet" href="quizgame.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="stop-scroll">
+    <div class="music-and-modes">
+      <!-- <div class="music">
+        <label for="music-checkbox" class="music-label">Music</label>
+        <input type="checkbox" id="music-checkbox" style="display: none;">
+        <h4 class="music-switch-text">Off</h4>
+        <span style="background-color: rgb(0, 41, 128);padding: 5px;cursor: pointer;color: white;" class="music-changer">Change music</span>
+      </div> -->
+      <div class="score">Score: <span class="points">0</span>/<span>15</span></div>
+
+      <button class='next-que-btn' onclick=nextQuestion() disabled>Next Question</button>
+
+      <div class="modes">
+        <input type="checkbox" id="checkbox" class="modes-checkbox">
+        <label for="checkbox" class="modes-label">
+          <span class="circle"></span>
+        </label>
+      </div>
+
+      
+
+      <i class="fa-solid fa-bars options-toggle"></i>
+
+    </div>
+    
+    <div class="options">
+        <i class="fa-solid fa-xmark options-toggle"></i>
+        <div class="player-details">
+        </div>
+        <button id="call-first-popup">Add player name +</button>
+        <button class="restart">Restart</button>
+    </div>
+       <main class="inactive">
+    
+       </main>
+
+       <div class="first-popup">
+          <div class="pfp-change">
+            <label for="profile-pic"><i class="fa-solid fa-camera" style="font-size: 25px;cursor: pointer;"></i> Choose Profile image</label>
+            <input type="file" name="image" id="profile-pic" accept="images" style="display: none;">
+            <img src="waving.png" alt="" width="300px" height="300px" class="prof-pic-big">
+          </div>
+          <div class="name-input">
+            <label for="player-name-inp">Enter player name</label>
+            <input type="text" id="player-name-inp" placeholder="Enter your name">
+          </div>
+          <i class="fa-solid fa-circle-xmark close-first-popup"></i>
+          <button id="submit-data">Continue</button>
+       </div>
+
+       <div class="congratulation-popup">
+        <h4 class="username">Congratulations Meshack</h4>
+        <h5 class="user-score">You have scored <span class="player-score"></span></h5>
+        <i class="fa-solid fa-trophy" style="color: #FFD43B;font-size: 50px;"></i>
+        <div class="restart" style="border: 2px solid white;width: 200px;padding: 10px;border-radius: 10px;cursor: pointer;text-align: center;">Restart game</div>
+
+       </div>
+    <script src="quizgame.js"></script>
+</body>
+</html>
